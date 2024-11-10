@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,39 +12,53 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
             display: flex;
+            flex-wrap: wrap;
+            /* Позволяет элементам переходить на новую строку */
             max-width: 1200px;
             margin: auto;
             padding: 20px;
             background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .photo {
             flex: 1;
             text-align: center;
             margin-right: 20px;
         }
+
         .photo img {
-            width: 150px; /* Размер фото 3x4 */
-            height: 200px; /* Размер фото 3x4 */
+            width: 150px;
+            /* Размер фото 3x4 */
+            height: 200px;
+            /* Размер фото 3x4 */
             border-radius: 5px;
         }
+
         .info {
             flex: 2;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-right: 20px;
+            /* Отступ от фото */
         }
+
         .portfolio {
             flex: 2;
-            margin-left: 20px;
+            min-width: 300px;
+            /* Минимальная ширина для портфолио */
         }
+
         .current {
             margin-bottom: 10px;
             display: flex;
             align-items: center;
         }
+
         .dot {
             width: 10px;
             height: 10px;
@@ -52,65 +67,97 @@
             margin-right: 5px;
             animation: blink 1.5s infinite;
         }
+
         @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
+
         h2 {
             font-size: 24px;
             margin: 10px 0;
         }
+
         h3 {
             font-size: 18px;
             margin: 5px 0;
         }
+
         ul {
             list-style: none;
             padding: 0;
         }
+
         li {
             background: #e7f7ff;
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
         }
+
+        /* Медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .info {
+                margin-right: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="photo">
-        <img src="https://via.placeholder.com/150x200" alt="Фотография">
-    </div>
-    <div class="info">
-        <div class="current">
-            <div class="dot"></div>
-            <h2>Текущее место работы</h2>
+    <div class="container">
+        <div class="photo">
+            <img src="https://via.placeholder.com/150x200" alt="Фотография">
         </div>
-        <div class="current">
-            <div class="dot"></div>
-            <h2>Текущее место обучения (вуз)</h2>
+        <div class="info">
+            <div class="current">
+                <div class="dot"></div>
+                <h2>Должность</h2>
+            </div>
+            <div class="current">
+                <div class="dot"></div>
+                <h2>Образование</h2>
+            </div>
+            <div class="current">
+                <div class="dot"></div>
+                <h2>Дополнительное образование</h2>
+            </div>
         </div>
-        <div class="current">
-            <div class="dot"></div>
-            <h2>Текущее место доп. обучения</h2>
+        <div class="portfolio">
+            <h3>Портфолио</h3>
+            <ul>
+                <li>Проект 1</li>
+                <li>Проект 2</li>
+                <li>Проект 3</li>
+                <li>Проект 4</li>
+            </ul>
         </div>
     </div>
-    <div class="portfolio">
-        <h3>Портфолио</h3>
-        <ul>
-            <li>Проект 1</li>
-            <li>Проект 2</li>
-            <li>Проект 3</li>
-            <li>Проект 4</li>
-        </ul>
-    </div>
-</div>
 
-<script>
-    // Здесь можно добавить дополнительные функции на JavaScript, если нужно
-</script>
+    <script>
+        // JavaScript
+    </script>
 
 </body>
+
 </html>
