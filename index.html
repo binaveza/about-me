@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Килина Ольги</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            overflow: auto;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .left-side,
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .left-side {
+            width: 30%;
+            background-color: #fff;
+            border-right: 1px solid #ddd;
+            min-height: 100vh;
+        }
+
+        .right-side {
+            width: 70%;
+            background-color: #fff;
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .skills-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            padding: 5px 10px;
+            background-color: #eaeaea;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .project-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .qr-code {
+            margin-left: auto;
+        }
+
+        .qr-code-image {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .contact-block {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-method {
+            text-align: center;
+        }
+
+        button.download-pdf {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-side,
+            .right-side {
+                width: 100%;
+            }
+
+            .left-side {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .contact-block {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-method {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <dl>
+                <dt><button class="download-pdf" onclick="window.print()">Скачать PDF</button></dt>
+                <dt><h1>Портфолио</h1></dt>
+            </dl>
+            
+            
+            <p><strong>Килина Ольга Владимировна</strong></p>
+            <p>Data Engineer</p>
+            <p>140 000 руб.</p>
+
+            <br>
+            <h2>Опыт работы</h2>
+
+            <li class="experience-item">
+                Разработчик ПО<br>
+                УК Платформа<br>
+                12.2023–_______
+            </li>
+            <li class="experience-item">
+                Администратор ERP<br>
+                УК Платформа<br>
+                01.2022–12.2023
+            </li>
+            <li class="experience-item">
+                Программист 1С<br>
+                Первый Бит<br>
+                09.2022–10.2022
+            </li>
+
+            <br>
+            <h2>Образование</h2>
+
+            <li class="education-item">
+                Магистр<br>
+                УРФУ, г. Екатеринбург<br>
+                «Прикладной искусственный интеллект»<br>
+                2024–2026
+            </li>
+            <li class="education-item">
+                Бакалавр<br>
+                КФУ, г. Казань<br>
+                «Программная инженерия»<br>
+                2017–2021
+            </li>
+
+            <br>
+            <h2>Дополнительное образование</h2>
+
+            <li>MBA-Intensive: Стратегический менеджмент в условиях кризиса</li>
+            <li>MBA-Intensive: Управление и финансы</li>
+            <li>Преподаватель математики и информатики</li>
+
+        </div>
+
+        <div class="right-side">
+            <br>
+            <h1>Проекты</h1>
+            <div class="project-item">
+                <p>Предсказание перехода клиента в банк – конкурент на основе датасета бинарной классификации оттока</p>
+                <div class="qr-code">
+                    <img src="project-1.png" alt="QR-код проекта 1" class="qr-code-image">
+                </div>
+            </div>
+            <div class="project-item">
+                <p>Решение задач предсказания непрерывного значения целевой переменной и предсказания класса 0 или 1</p>
+                <div class="qr-code">
+                    <img src="project-2.png" alt="QR-код проекта 2" class="qr-code-image">
+                </div>
+            </div>
+            <h2>Навыки</h2>
+            <div class="skills-list">
+                <span class="skill-item">SQL (Postgres, Oracle DB, Clickhouse)</span>
+                <span class="skill-item">Применение базовых ML-подходов</span>
+                <span class="skill-item">GIT</span>
+                <span class="skill-item">Python (+ библиотеки для работы с данными и визуализацией)</span>
+                <span class="skill-item">Apache Airflow</span>
+                <span class="skill-item">Apache Spark</span>
+            </div>
+
+            <br>
+            <h2>О себе</h2>
+            <p>Моя цель на ближайшие годы — углубить свои знания в области дата инженерии и получить диплом
+                магистра. Кроме того, я стремлюсь развивать лидерские качества и через пять лет вижу себя в роли
+                руководителя команды, способного вдохновлять и мотивировать людей на достижение высоких результатов.
+            </p>
+            <p>Я ценю возможность карьерного роста в компании как по вертикали, так и по горизонтали, 
+                основанную на практических достижениях и высокой работоспособности. Кроме того, для меня важно наличие 
+                возможностей для профессионального развития и обучения.</p>
+            
+            <br>
+            <h2>Контакты</h2>
+            <div class="contact-block">
+                <div class="contact-method">
+                    WhatsApp:<br>
+                    <img src="whatsapp.png" alt="QR-код WhatsApp" class="qr-code-image">
+                </div>
+            </div>
+        </div>
+</body>
